@@ -1,16 +1,15 @@
-// frontend/src/main.jsx (or index.js)
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+// We swap BrowserRouter for HashRouter here
+import { HashRouter } from 'react-router-dom';
 import ShopContextProvider from './context/ShopContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
+    <HashRouter>
       <ShopContextProvider>
         <App />
       </ShopContextProvider>
-    </BrowserRouter>
+    </HashRouter>
 );
