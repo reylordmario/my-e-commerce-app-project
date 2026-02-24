@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import "tailwindcss";
+
+body {
+    /* Adds 20 pixels of space on the top, right, bottom, and left of the entire page content. */
+   
+    /* or, only for the sides: */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+a.active hr{
+  display: block;
+}
+
+*{
+  font-family: outfit;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 640px) {
+ a.active{
+  background-color: black;
+  color: white;
+ }
+}
