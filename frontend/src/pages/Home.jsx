@@ -5,18 +5,22 @@ import BestSeller from '../components/BestSeller';
 import OurPolicy from '../components/OurPolicy';
 import NewsletterBox from '../components/NewsletterBox';
 import GetInTouch from '../components/GetInTouch';
+import PromoMarquee from '../components/PromoMarquee';
 
 const Home = () => {
   return (
     <div className='min-h-screen'>
       
       {/* 1. Placing your Hero component back at the top */}
-      <Hero /> 
+      <Hero />
 
-      {/* The generic "Welcome to the Store!" section has been removed */}
+      {/* 2. Moving promo marquee — brand value props */}
+      <PromoMarquee />
 
-      {/* 2. Keeping the LatestCollection component that is now working */}
-      <LatestCollection />
+      {/* 3. Latest collections (pushed down by the marquee) */}
+      <div className='mt-4'>
+        <LatestCollection />
+      </div>
       <BestSeller />
       <OurPolicy />
       <NewsletterBox />

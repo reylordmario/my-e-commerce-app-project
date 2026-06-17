@@ -28,7 +28,7 @@ import SearchBar from './components/SearchBar.jsx';
 // ===================================================================
 const App = () => {
   return (
-    <div className='min-h-screen flex flex-col px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <div className='min-h-screen flex flex-col px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] overflow-x-clip'>
       <ToastContainer position='bottom-right' autoClose={2000} hideProgressBar theme='dark' />
       {/* Navbar is outside Routes so it shows on every page */}
       <Navbar />
