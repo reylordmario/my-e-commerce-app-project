@@ -26,31 +26,31 @@ const GetInTouch = () => {
         <div className="flex-1">
           <h2 className="text-4xl font-bold leading-tight mb-8 uppercase tracking-tighter">
             Let's create something <br />
-            <span className="bg-black text-white px-2">amazing</span> together
+            <span className="bg-[#7a0f1e] text-white px-2">timeless</span> together
           </h2>
           <p className="text-gray-500 mb-12 max-w-sm leading-relaxed text-lg">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            Booking a custom terno or barong, or have a question about your order? Our atelier would love to hear from you.
           </p>
 
           <div className="space-y-10">
             {/* Info Item */}
             <div className="border-b border-gray-200 pb-6">
               <span className="block text-[8px] font-black tracking-[0.2em] uppercase text-gray-400 mb-2">Email</span>
-              <a href="mailto:hello@johndoe.dev" className="text-l hover:text-gray-600 transition-colors">
-                hello@johndoe.dev
+              <a href="mailto:kamusta@habipinas.ph" className="text-l hover:text-gray-600 transition-colors">
+                kamusta@habipinas.ph
               </a>
             </div>
 
             {/* Info Item */}
             <div className="border-b border-gray-200 pb-6">
               <span className="block text-[8px] font-black tracking-[0.2em] uppercase text-gray-400 mb-2">Phone</span>
-              <p className="text-l">+1 (555) 123-4567</p>
+              <p className="text-l">(02) 8123-4567</p>
             </div>
 
             {/* Info Item */}
             <div className="border-b border-gray-200 pb-6">
               <span className="block text-[8px] font-black tracking-[0.2em] uppercase text-gray-400 mb-2">Location</span>
-              <p className="text-l uppercase tracking-tight font-medium">San Francisco, CA</p>
+              <p className="text-l uppercase tracking-tight font-medium">Manila, Philippines</p>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const GetInTouch = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="John Doe" 
+                placeholder="Juan dela Cruz"
                 required
                 className="w-full bg-transparent border-b border-black py-3 focus:outline-none focus:border-gray-400 transition-colors placeholder-gray-300"
               />
@@ -78,7 +78,7 @@ const GetInTouch = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="john@example.com" 
+                placeholder="juan@email.com"
                 required
                 className="w-full bg-transparent border-b border-black py-3 focus:outline-none focus:border-gray-400 transition-colors placeholder-gray-300"
               />
@@ -91,7 +91,7 @@ const GetInTouch = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="4" 
-                placeholder="Tell me about your project..." 
+                placeholder="Tell us about the piece you have in mind..."
                 required
                 className="w-full bg-transparent border-b border-black py-3 focus:outline-none focus:border-gray-400 transition-colors placeholder-gray-300 resize-none"
               ></textarea>

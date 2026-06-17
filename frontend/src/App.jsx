@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // ===================================================================
 // 1. Component Imports
@@ -17,6 +19,7 @@ import Login from './pages/Login.jsx';
 import Orders from './pages/Orders.jsx';
 import PlaceOrder from './pages/PlaceOrder.jsx';
 import Footer from './components/Footer.jsx';
+import SearchBar from './components/SearchBar.jsx';
 
 
 
@@ -25,9 +28,11 @@ import Footer from './components/Footer.jsx';
 // ===================================================================
 const App = () => {
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+      <ToastContainer position='bottom-right' autoClose={2000} hideProgressBar theme='dark' />
       {/* Navbar is outside Routes so it shows on every page */}
       <Navbar />
+      <SearchBar />
 
       <main className='flex-grow'>
         {/* Routing Setup */}

@@ -1,16 +1,15 @@
 import React from 'react'
-import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
     <div>
       <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
-        
-        {/* Left Section: Logo & Description */}
+
+        {/* Left Section: Brand & Description */}
         <div>
-            <img src={assets.logo} className='mb-5 w-32' alt="logo" />
+            <p className='mb-5 text-2xl font-bold tracking-tight'><span className='text-[#7a0f1e]'>Habi</span> <span className='text-[#c8902a]'>Pinas</span></p>
             <p className='w-full md:w-2/3 text-gray-600'>
-                Elevate your style with TrendyThreads - where fashion meets affordability. Discover the latest trends and timeless classics, all in one place.
+                Heritage woven in elegance. Handcrafted Filipiniana ternos, Maria Clara gowns, and piña Barong Tagalog for every proud Filipino celebration.
             </p>
         </div>
 
@@ -29,8 +28,8 @@ const Footer = () => {
         <div>
             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
             <ul className='flex flex-col gap-1 text-gray-600'>
-                <li>+1-212-456-7890</li>
-                <li>contact@foreveryou.com</li>
+                <li>(02) 8123-4567</li>
+                <li>kamusta@habipinas.ph</li>
             </ul>
         </div>
 
@@ -38,11 +37,9 @@ const Footer = () => {
 
       {/* Bottom Copyright Section */}
       <div className='w-full'>
-          {/* This line uses negative margins to break out of the parent padding */}
           <hr className='border-none h-[0.75px] bg-gray-700 mx-[-10vw] sm:mx-[-5vw]' />
-          
           <p className='py-5 text-sm text-center'>
-            Copyright 2026 @ foreveryou.com - All Right Reserved.
+            Copyright 2026 © habipinas.ph — All Rights Reserved.
           </p>
       </div>
 
