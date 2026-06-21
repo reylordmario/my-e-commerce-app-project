@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-toastify'
-import { products, onImgError } from '../assets/assets'
+import { Shirt, Ruler, Footprints, Car, MapPin, ChevronDown } from 'lucide-react'
+import { onImgError } from '../assets/assets'
 import Title from '../components/Title'
 import NewsletterBox from '../components/NewsletterBox'
 
@@ -8,10 +9,15 @@ const MAP_QUERY = 'Manila, Philippines'
 const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&z=13&output=embed`
 const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
 
-// Curated slides for the contact carousel
-const slides = ['fp01', 'bp01', 'fp03', 'fp06', 'bp04']
-  .map((id) => products.find((p) => p._id === id))
-  .filter(Boolean)
+// Atelier/boutique store imagery for the contact carousel (sample stock photos)
+const WM = 'https://upload.wikimedia.org/wikipedia/commons/thumb/'
+const slides = [
+  { src: WM + 'd/d4/ArtAmbient_boutique_interior_Arta.jpg/960px-ArtAmbient_boutique_interior_Arta.jpg', name: 'Inside Our Atelier' },
+  { src: WM + '3/3e/Fashion_boutique.jpg/960px-Fashion_boutique.jpg', name: 'The Habi Pinas Boutique' },
+  { src: WM + 'c/c5/Man_examines_clothing_in_a_boutique_while_shopping_for_fashionable_attire_in_a_trendy_store_setting.jpg/960px-Man_examines_clothing_in_a_boutique_while_shopping_for_fashionable_attire_in_a_trendy_store_setting.jpg', name: 'Handpicked Heritage Fabrics' },
+  { src: WM + "8/8e/Shop_assistant_inside_a_colorful_women%27s_clothing_boutique%2C_Gaibandha%2C_Bangladesh_2026_01.jpg/960px-Shop_assistant_inside_a_colorful_women%27s_clothing_boutique%2C_Gaibandha%2C_Bangladesh_2026_01.jpg", name: 'Personal Styling Service' },
+  { src: WM + 'f/f7/Clothing_store_interior_Son_Moro_Cala_Millor.jpg/960px-Clothing_store_interior_Son_Moro_Cala_Millor.jpg', name: 'Made-to-Measure Fittings' },
+]
 
 const Carousel = () => {
   const [idx, setIdx] = useState(0)
@@ -26,11 +32,11 @@ const Carousel = () => {
     <div className='relative w-full md:max-w-[480px] h-[420px] rounded-lg overflow-hidden bg-[#fdf8f0] group shadow-md'>
       {slides.map((s, i) => (
         <img
-          key={s._id}
-          src={s.image[0]}
+          key={i}
+          src={s.src}
           onError={onImgError}
           alt={s.name}
-          className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${i === idx ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${i === idx ? 'opacity-100' : 'opacity-0'}`}
         />
       ))}
 
@@ -248,11 +254,11 @@ const VisitUs = ({ onBook }) => {
         <div className='bg-gradient-to-br from-[#7a0f1e] to-[#3a0d18] text-white rounded-2xl p-7 shadow-sm flex flex-col justify-center'>
           <p className='text-[#f2c14e] tracking-[0.2em] text-xs font-semibold uppercase mb-3'>Drop By Our Atelier</p>
           <h3 className='prata-regular text-2xl mb-4'>Feel the fabrics in person</h3>
-          <ul className='flex flex-col gap-3 text-white/85 text-sm'>
-            <li className='flex gap-3'><span>🧵</span> Browse handwoven piña, jusi &amp; inabel up close</li>
-            <li className='flex gap-3'><span>📏</span> Free measurement &amp; styling consultation</li>
-            <li className='flex gap-3'><span>🚶</span> Walk-ins welcome — appointments get priority</li>
-            <li className='flex gap-3'><span>🅿️</span> Free parking available on-site</li>
+          <ul className='flex flex-col gap-4 text-white/85 text-sm'>
+            <li className='flex items-center gap-3'><Shirt size={18} strokeWidth={1.5} className='text-[#f2c14e] shrink-0' /> Browse handwoven piña, jusi &amp; inabel up close</li>
+            <li className='flex items-center gap-3'><Ruler size={18} strokeWidth={1.5} className='text-[#f2c14e] shrink-0' /> Free measurement &amp; styling consultation</li>
+            <li className='flex items-center gap-3'><Footprints size={18} strokeWidth={1.5} className='text-[#f2c14e] shrink-0' /> Walk-ins welcome — appointments get priority</li>
+            <li className='flex items-center gap-3'><Car size={18} strokeWidth={1.5} className='text-[#f2c14e] shrink-0' /> Free parking available on-site</li>
           </ul>
           <button onClick={onBook} className='self-start mt-6 bg-[#f2c14e] text-[#3a0d18] font-semibold px-7 py-3 rounded-full hover:bg-white transition-colors'>
             Book an Appointment
@@ -311,9 +317,9 @@ const Contact = () => {
               aria-expanded={showMap}
               className='flex items-center gap-2 text-sm bg-[#7a0f1e] text-white px-6 py-2.5 rounded-full hover:bg-[#5e0f24] active:scale-95 transition-all'
             >
-              <span className='text-base leading-none'>📍</span>
+              <MapPin size={16} strokeWidth={1.8} />
               {showMap ? 'Hide Map' : 'View Map'}
-              <span className={`transition-transform duration-300 ${showMap ? 'rotate-180' : ''}`}>▾</span>
+              <ChevronDown size={16} strokeWidth={2} className={`transition-transform duration-300 ${showMap ? 'rotate-180' : ''}`} />
             </button>
           </div>
         </div>
