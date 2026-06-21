@@ -1,7 +1,7 @@
 // frontend/src/components/Navbar.jsx
 import React, { useContext, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { X, LogOut, LogIn, ArrowUpRight, Scissors } from 'lucide-react';
+import { X } from 'lucide-react';
 import { assets } from '../assets/assets.js';
 import { ShopContext } from '../context/ShopContext';
 
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </div>
 
                 {/* centered nav items */}
-                <nav className='flex flex-col gap-1.5 p-4'>
+                <nav className='flex flex-col gap-1.5 p-4 pb-6'>
                     {LINKS.map(({ to, label }) => (
                         <NavLink
                             key={to}
@@ -103,30 +103,6 @@ const Navbar = () => {
                         </NavLink>
                     ))}
                 </nav>
-
-                {/* action buttons */}
-                <div className='flex flex-col gap-3 px-4 pb-5 pt-1'>
-                    <Link
-                        to='/collection'
-                        onClick={close}
-                        className='flex items-center justify-center gap-2 py-3 rounded-full bg-[#f2c14e] text-[#3a0d18] font-semibold text-sm hover:bg-[#e7b53e] active:scale-95 transition-all'
-                    >
-                        Shop Collection <ArrowUpRight size={16} />
-                    </Link>
-                    {user ? (
-                        <button onClick={logout} className='flex items-center justify-center gap-2 py-3 rounded-full border border-white/30 text-white text-sm hover:bg-white/10 transition-colors'>
-                            <LogOut size={16} /> Logout
-                        </button>
-                    ) : (
-                        <Link
-                            to='/contact'
-                            onClick={close}
-                            className='flex items-center justify-center gap-2 py-3 rounded-full border border-white/30 text-white text-sm hover:bg-white/10 transition-colors'
-                        >
-                            <Scissors size={16} /> Book a Fitting
-                        </Link>
-                    )}
-                </div>
             </div>
         </header>
     );
