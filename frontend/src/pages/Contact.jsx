@@ -13,10 +13,10 @@ const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURICom
 const WM = 'https://upload.wikimedia.org/wikipedia/commons/thumb/'
 const slides = [
   { src: WM + 'd/d4/ArtAmbient_boutique_interior_Arta.jpg/960px-ArtAmbient_boutique_interior_Arta.jpg', name: 'Inside Our Atelier' },
-  { src: WM + '3/3e/Fashion_boutique.jpg/960px-Fashion_boutique.jpg', name: 'The Habi Pinas Boutique' },
+  { src: WM + '6/64/French_Quarter_Boutique_Window.jpg/960px-French_Quarter_Boutique_Window.jpg', name: 'The Habi Pinas Boutique' },
   { src: WM + 'c/c5/Man_examines_clothing_in_a_boutique_while_shopping_for_fashionable_attire_in_a_trendy_store_setting.jpg/960px-Man_examines_clothing_in_a_boutique_while_shopping_for_fashionable_attire_in_a_trendy_store_setting.jpg', name: 'Handpicked Heritage Fabrics' },
   { src: WM + "8/8e/Shop_assistant_inside_a_colorful_women%27s_clothing_boutique%2C_Gaibandha%2C_Bangladesh_2026_01.jpg/960px-Shop_assistant_inside_a_colorful_women%27s_clothing_boutique%2C_Gaibandha%2C_Bangladesh_2026_01.jpg", name: 'Personal Styling Service' },
-  { src: WM + 'f/f7/Clothing_store_interior_Son_Moro_Cala_Millor.jpg/960px-Clothing_store_interior_Son_Moro_Cala_Millor.jpg', name: 'Made-to-Measure Fittings' },
+  { src: WM + 'd/df/Pritchards%2C_Tailor_and_Outfitter%2C_Oswestry_%281472414%29.jpg/960px-Pritchards%2C_Tailor_and_Outfitter%2C_Oswestry_%281472414%29.jpg', name: 'Made-to-Measure Fittings' },
 ]
 
 const Carousel = () => {
