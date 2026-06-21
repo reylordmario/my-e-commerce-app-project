@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { assets, onImgError } from '../assets/assets'
+import { onImgError } from '../assets/assets'
+import heroImg from '../assets/hero_img.png'
 
 const Hero = () => {
   return (
@@ -45,9 +46,9 @@ const Hero = () => {
         {/* Right — image */}
         <div className='order-1 md:order-2 relative min-h-[48vh] md:min-h-full bg-[#26211d]'>
           <img
-            src={assets.heroPhoto}
+            src={heroImg}
             onError={onImgError}
-            alt='Filipiniana terno'
+            alt='Filipino family in Barong and Filipiniana terno'
             className='absolute inset-0 w-full h-full object-cover object-top'
             loading='eager'
           />
